@@ -1,0 +1,60 @@
+📌 Descrição
+Este programa em C++ tem como objetivo calcular a média de um aluno a partir de duas notas, considerar sua frequência e determinar sua situação final na disciplina.
+A aplicação simula um boletim simples, exibindo média, frequência e o resultado final do aluno com base em regras acadêmicas.
+Regras de avaliação
+ - Frequência menor que 75% → Reprovado por faltas
+ - Caso contrário:
+.Média maior ou igual a 7 → Aprovado
+.Média entre 5 e 6.9 → Recuperação
+.Média menor que 5 → Reprovado
+
+#include<stdio.h>
+#include<stdlib.h>
+
+float media, nota1, nota2, frequencia, total;
+char situacao[30];
+
+int main()
+{
+	printf("Informe a nota da prova aberta: ");
+		scanf("%f", &nota1);
+	printf("Informe a nota da prova testes: " );
+		scanf("%f", &nota2);
+	
+	total = nota1 + nota2;
+	media = total/2;
+	
+		printf("\n  Sua media e: %1.1f\n\n", media);
+			
+	printf("Informe a frequencia: ");
+		scanf("%f", &frequencia);
+		
+	
+	if(frequencia < 75.0)
+	{
+		printf("\n Reprovado por faltas\n");
+			sprintf(situacao, " Reprovado por faltas");
+	}
+	else if(media >= 7.0)
+	{
+		printf("\nAprovado\n");
+			sprintf(situacao, " Aprovado");
+	}
+	else if(media >= 5.0)
+	{
+		printf("\nRecuperacao\n");	
+			sprintf(situacao, " Recuperacao");	
+	}
+	else
+	{
+		printf("\nReprovado\n");
+			sprintf(situacao, " Reprovado");
+	}
+
+		
+	printf("\nBoletim do aluno:\n");
+	
+	printf(" Sua Media: %1.1f.\n Sua Frequencia: %1.1f.\n Situacao: %s.\n\n", media, frequencia, situacao);
+	
+	system("pause");
+}
