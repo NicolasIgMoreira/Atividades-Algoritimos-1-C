@@ -1,0 +1,76 @@
+📌 Descrição
+/*  Este programa em C++ calcula a dosagem recomendada de um medicamento com base na idade e no peso do paciente.
+A aplicação simula um sistema simples de apoio à decisão, determinando a quantidade de miligramas (mg) e convertendo esse valor em número de gotas.
+👤 Pacientes com 12 anos ou mais:
+Peso ≥ 60 kg → 1000 mg
+Peso < 60 kg → 875 mg
+🧒 Pacientes com menos de 12 anos:
+Até 9 kg → 125 mg
+Até 16 kg → 250 mg
+Até 24 kg → 375 mg
+Até 30 kg → 500 mg
+Acima de 30 kg → 750 mg
+💧 Conversão para gotas
+A quantidade de gotas é calculada com base na fórmula:
+1 gota = 25 mg */
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int idade, gotas;
+float peso;
+
+int main()
+{
+	printf("Informe a idade do paciente: ");
+		scanf("%i", &idade);
+	printf("\nInforme em Kg o peso do paciente: ");
+		scanf("%f", &peso);
+		
+	if(idade >= 12)
+	{
+		if(peso >= 60)
+		{
+			printf("\nPacientes devem tomar 1000mg\n");
+				gotas = 1000/25;
+		}
+		else
+		{
+			printf("\nPacientes devem tomar 875mg\n");
+				gotas = 875/25;
+		}
+	}
+	else
+	{
+		if(peso<=9)
+		{
+			printf("\nPacientes devem tomar 125mg\n");
+				gotas = 125/25;
+		}
+		else if(peso <= 16)
+		{
+			printf("\nPacientes devem tomar 250mg\n");
+				gotas = 250/25;
+		}
+		else if(peso <= 24)
+		{
+			printf("\nPacientes devem tomar 375mg\n");
+				gotas = 375/25;
+		}
+		else if(peso <= 30)
+		{
+			printf("\nPacientes devem tomar 500mg\n");	
+				gotas = 500/25;
+		}
+		else
+		{
+			printf("\nPacientes devem tomar 750mg\n");	
+				gotas = 750/25;
+		}
+	}
+	
+	printf("\nA quantidade de gotas a tomar e: %i.\n\n", gotas);
+	
+	system("pause");
+}
