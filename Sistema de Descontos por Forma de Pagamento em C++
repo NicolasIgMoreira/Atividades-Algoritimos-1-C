@@ -1,4 +1,4 @@
-Descrição:
+📌Descrição:
   /* Este programa em C++ calcula o valor final de um produto com base na forma de pagamento escolhida pelo usuário.
 O sistema aplica diferentes porcentagens de desconto conforme a opção selecionada, simulando condições comuns de pagamento em compras.
 - Pagamento à vista (1) → 15% de desconto
